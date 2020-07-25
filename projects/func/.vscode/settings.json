@@ -1,0 +1,15 @@
+{
+  "python.venvPath": "~/.cache/pypoetry/virtualenvs",
+  "python.pythonPath": "/home/vscode/.cache/pypoetry/virtualenvs/func-1vQDvI9y-py3.8/bin/python3",
+  "python.linting.flake8Enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.testing.pytestArgs": [
+    "tests"
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.nosetestsEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python.testing.autoTestDiscoverOnSaveEnabled": false,
+  "python.linting.flake8CategorySeverity.E": "Warning",
+  "python.linting.flake8CategorySeverity.F": "Warning"
+}

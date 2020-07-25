@@ -1,4 +1,4 @@
 {
   "python.venvPath": "~/.cache/pypoetry/virtualenvs",
-  "python.pythonPath": "/root/.cache/pypoetry/virtualenvs/notebooks-4YGLAiTd-py3.8/bin/python"
+  "python.pythonPath": "/home/vscode/.cache/pypoetry/virtualenvs/notebooks-4YGLAiTd-py3.8/bin/python3"
 }
