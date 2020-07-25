@@ -17,7 +17,7 @@ class ModelLoaderTests(unittest.TestCase):
 
         self.assertEqual(model, fake_model)
         mock_load.assert_called_once_with(
-            'resources/friends_model.h5', compile=False)
+            'resources/friends_practice_model.h5', compile=False)
 
     def test_load_specified_path(self, mock_load: MagicMock):
         fake_model = Sequential()
