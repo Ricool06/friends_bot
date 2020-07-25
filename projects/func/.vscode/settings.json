@@ -1,6 +1,6 @@
 {
   "python.venvPath": "~/.cache/pypoetry/virtualenvs",
-  "python.pythonPath": "/root/.cache/pypoetry/virtualenvs/func-1vQDvI9y-py3.8/bin/python",
+  "python.pythonPath": "/home/vscode/.cache/pypoetry/virtualenvs/func-1vQDvI9y-py3.8/bin/python3",
   "python.linting.flake8Enabled": true,
   "python.linting.pylintEnabled": false,
   "python.testing.pytestArgs": [

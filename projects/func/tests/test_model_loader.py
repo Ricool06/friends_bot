@@ -2,7 +2,6 @@ from unittest.mock import MagicMock
 from tensorflow.keras.models import Sequential
 import unittest
 from unittest import mock
-
 from tensorflow.python.framework.tensor_shape import TensorShape
 from src.func.model_loader import load_friends_model
 

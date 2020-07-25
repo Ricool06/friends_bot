@@ -9,10 +9,11 @@
 ARG VARIANT="3"
 FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 
+USER vscode
 RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/1.0.9/get-poetry.py | python \
   && echo '. $HOME/.poetry/env' >> $HOME/.bashrc \
-  && . $HOME/.poetry/env \
-  && poetry completions bash > /etc/bash_completion.d/poetry.bash-completion
+  && . $HOME/.poetry/env
+  # && poetry completions bash > /etc/bash_completion.d/poetry.bash-completion
 
 # [Optional] If your requirements rarely change, uncomment this section to add them to the image.
 #
