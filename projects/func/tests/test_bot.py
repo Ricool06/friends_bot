@@ -3,11 +3,11 @@ from unittest.mock import DEFAULT, MagicMock, Mock
 from tweepy import API
 from tweepy.models import Status
 
-from src.func.bot import handler
+from func.bot import handler
 
 
 @mock.patch.multiple(
-    'src.func.bot',
+    'func.bot',
     load_vocab=DEFAULT,
     load_friends_model=DEFAULT,
     generate_quote=DEFAULT,

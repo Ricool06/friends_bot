@@ -1,0 +1,23 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - run: >
+      curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/1.0.9/get-poetry.py | python \
+      && echo '. $HOME/.poetry/env' >> $HOME/.bashrc \
+      && . $HOME/.poetry/env
+    - run: >
+      cd projects/func && poetry install && poetry shell && flake8 && pytest
+    - run: cd projects/func && poetry build && docker build -t friends_bot .
+    - run: "docker login --username ricool06 -p ${{ secrets.NPM_TOKEN }} && docker push friends_bot"
+      if: github.ref == 'refs/heads/master'
+
+      env:
+        CI: true

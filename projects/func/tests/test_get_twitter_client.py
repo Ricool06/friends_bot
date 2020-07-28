@@ -2,7 +2,7 @@ from unittest import TestCase
 from unittest import mock
 from unittest.mock import DEFAULT, MagicMock
 
-from src.func.get_twitter_client import get_twitter_client
+from func.get_twitter_client import get_twitter_client
 
 
 mock_environ = {
@@ -14,7 +14,7 @@ mock_environ = {
 
 
 @mock.patch.multiple(
-    'src.func.get_twitter_client',
+    'func.get_twitter_client',
     API=DEFAULT,
     OAuthHandler=DEFAULT,
     environ=mock_environ,

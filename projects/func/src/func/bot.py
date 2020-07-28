@@ -4,9 +4,9 @@ import random
 from tweepy.models import Status
 from func.get_twitter_client import get_twitter_client
 
-from src.func.vocab_loader import load_vocab
-from src.func.model_loader import load_friends_model
-from src.func.quote_generator import generate_quote
+from func.vocab_loader import load_vocab
+from func.model_loader import load_friends_model
+from func.quote_generator import generate_quote
 
 
 def handler(event: Dict, context) -> Status:
@@ -21,3 +21,7 @@ def handler(event: Dict, context) -> Status:
     api = get_twitter_client()
 
     return api.update_status(quote)
+
+
+if __name__ == '__main__':
+    handler({}, None)
