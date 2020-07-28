@@ -2,7 +2,7 @@ from unittest.mock import MagicMock
 import tensorflow
 from tensorflow import expand_dims, Tensor
 
-from src.func.quote_generator import generate_quote
+from func.quote_generator import generate_quote
 
 
 class QuoteGeneratorTests(tensorflow.test.TestCase):

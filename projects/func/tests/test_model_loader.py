@@ -3,10 +3,10 @@ from tensorflow.keras.models import Sequential
 import unittest
 from unittest import mock
 from tensorflow.python.framework.tensor_shape import TensorShape
-from src.func.model_loader import load_friends_model
+from func.model_loader import load_friends_model
 
 
-@mock.patch('src.func.model_loader.load_model')
+@mock.patch('func.model_loader.load_model')
 class ModelLoaderTests(unittest.TestCase):
 
     def test_load_default_path(self, mock_load: MagicMock):

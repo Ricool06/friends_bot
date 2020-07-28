@@ -3,7 +3,7 @@ from unittest.mock import MagicMock
 import unittest
 from unittest import mock
 
-from src.func.vocab_loader import load_vocab
+from func.vocab_loader import load_vocab
 
 
 class VocabLoaderTests(unittest.TestCase):
