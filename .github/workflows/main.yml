@@ -27,32 +27,8 @@ jobs:
       run: . $HOME/.poetry/env && cd projects/func && poetry install && poetry run flake8 && poetry run pytest
 
     - name: Build docker image
-      run: . $HOME/.poetry/env && cd projects/func && poetry build && docker build -t friends_bot .
+      run: . $HOME/.poetry/env && cd projects/func && poetry build && docker build -t ricool06/friends_bot .
 
     - name: Push docker image
-      run: "docker login --username ricool06 -p ${{ secrets.DOCKER_HUB_TOKEN }} && docker push friends_bot"
+      run: "echo ${{ secrets.DOCKER_HUB_TOKEN }} | docker login --username ricool06 --password-stdin && docker push ricool06/friends_bot"
       if: github.ref == 'refs/heads/master'
-
-# name: CI
-
-# on: [push, pull_request]
-
-# jobs:
-#   build:
-
-#     runs-on: ubuntu-latest
-
-#     steps:
-#     - uses: actions/checkout@v2
-#     - run: >
-#       curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/1.0.9/get-poetry.py | python \
-#       && echo '. $HOME/.poetry/env' >> $HOME/.bashrc \
-#       && . $HOME/.poetry/env
-#     - run: >
-#       cd projects/func && poetry install && poetry shell && flake8 && pytest
-#     - run: cd projects/func && poetry build && docker build -t friends_bot .
-#     - run: "docker login --username ricool06 -p ${{ secrets.NPM_TOKEN }} && docker push friends_bot"
-#       if: github.ref == 'refs/heads/master'
-
-#       env:
-#         CI: true
