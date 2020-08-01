@@ -6,11 +6,11 @@ authors = ["Ricool06 <Ricool06@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+pip = "^20"
 jupyterlab = "^2.1.5"
 beautifulsoup4 = "^4.9.1"
 ipykernel = "^5.3.2"
-numpy = "^1.19.0"
-tensorflow = "^2.2.0"
+tensorflow-gpu = "^2.3.0"
 
 [tool.poetry.dev-dependencies]
 
