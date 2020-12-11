@@ -26,5 +26,3 @@ class ModelLoaderTests(unittest.TestCase):
         self.assertEqual(model, fake_model)
         mock_pipeline.assert_called_once_with(
             'text-generation', model='some/silly/path')
-
-
