@@ -8,6 +8,7 @@ authors = ["Ricool06 <Ricool06@users.noreply.github.com>"]
 python = "^3.8"
 tweepy = "^3.9.0"
 transformers = {version = "^3.0.0-rc.2", allow-prereleases = true}
+torch = "^1.7.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
