@@ -11,5 +11,6 @@
   "python.testing.pytestEnabled": true,
   "python.testing.autoTestDiscoverOnSaveEnabled": false,
   "python.linting.flake8CategorySeverity.E": "Warning",
-  "python.linting.flake8CategorySeverity.F": "Warning"
+  "python.linting.flake8CategorySeverity.F": "Warning",
+  "python.linting.enabled": true
 }
